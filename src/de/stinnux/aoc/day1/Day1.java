@@ -1,6 +1,7 @@
 package de.stinnux.aoc.day1;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,15 +11,15 @@ public class Day1 {
     private List<Integer> integerList = new ArrayList<>();
 
 
-    public Day1() {
+    public Day1() throws FileNotFoundException {
         try (BufferedReader br = new BufferedReader(new FileReader("src/day1.txt"))) {
-            String line=br.readLine();
+            String line = br.readLine();
             while (line != null) {
                 integerList.add(Integer.parseInt(line));
-                line=br.readLine();
+                line = br.readLine();
             }
         } catch (IOException e) {
-                System.err.println(e.getLocalizedMessage());
+            System.err.println(e.getLocalizedMessage());
         }
     }
 

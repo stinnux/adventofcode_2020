@@ -1,12 +1,13 @@
 package de.stinnux.aoc;
 
-import de.stinnux.aoc.day1.Day1;
+import de.stinnux.aoc.day2.Day2;
+
+import java.io.IOException;
 
 public class Main {
 
-    public static void main(String[] args) {
-	    Day1 p = new Day1();
+    public static void main(String[] args) throws IOException {
+        Day2 p = new Day2();
 
-	    p.find2020_three();
     }
 }
